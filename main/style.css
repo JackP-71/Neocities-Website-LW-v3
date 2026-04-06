@@ -1,0 +1,600 @@
+@font-face {
+    font-family: Nunito;
+    src: url('https://sadhost.neocities.org/fonts/Nunito-Regular.ttf');
+}
+
+@font-face {
+    font-family: Nunito;
+    src: url('https://sadhost.neocities.org/fonts/Nunito-Regular.ttf');
+}
+
+@font-face {
+    font-family: Nunito;
+    src: url('https://sadhost.neocities.org/fonts/Nunito-Bold.ttf');
+    font-weight: bold;
+}
+
+@font-face {
+    font-family: Nunito;
+    src: url('https://sadhost.neocities.org/fonts/Nunito-Italic.ttf');
+    font-style: italic;
+}
+
+@font-face {
+    font-family: Nunito;
+    src: url('https://sadhost.neocities.org/fonts/Nunito-BoldItalic.ttf');
+    font-style: italic;
+    font-weight: bold;
+}
+
+:root {
+    --body-bg-image: linear-gradient(#4b0966, #2b013c);
+    margin:0;
+    --content: #43256E;
+    white-space: wrap;
+    
+    /* DEFINED VARIABLES */
+    --bg-color: #000000;
+    --box-color: #1c092d;
+    --font-color: #fceaff;
+    --accent-color: #ce41ce;
+    --link-color: #943594;
+    --link-hover-color: #a49cba;
+    --accent-with-opacity: rgba(63, 19, 63, 0.9);
+
+    /* change url and img - obviously... */
+    --avatar-image:url(images/MeAlt.png);
+    --character-image: url(images/H_Thought.png);
+    --thought-image: url(images/H_Thought_Bubble.png);
+}
+
+[data-theme="dark"] {
+    /* DEFINED VARIABLES */
+    --body-bg-image: linear-gradient(#e99220, #442f07);
+    --bg-color: #000000;
+    --box-color: #2d2709;
+    --font-color: #fceaff;
+    --accent-color: #e9a220;
+    --link-color: #cfb97d;
+    --link-hover-color: #f0d079;
+    --gradient-color: #725115;
+    --accent-with-opacity: rgba(49, 34, 7, 0.9);
+
+    /* change url and img - obviously... */
+    --avatar-image:url(images/MeAlt-D.png);
+    --character-image: url(images/D_Thought.png);
+    --thought-image: url(images/D_Thought_Bubble.png)
+}
+
+html, body {
+    margin: 0;
+    min-height: 100vh;
+}
+
+/* font rules  */
+p {
+    font-size: medium;
+}
+h1, h2, h3 {
+    color: var(--accent-color);
+}
+h1 {
+    font-size: 25px;
+}
+p, marquee {
+    color: var(--font-color);
+}
+strong {
+    color: var(--accent-color);
+}
+a {
+    color: var(--link-color);
+    text-decoration: none;
+    font-weight: bold;
+}
+a:hover {
+    text-decoration: underline;
+}
+ul {
+    list-style-type: "✦ ";
+}
+
+/* heading style rules */
+
+.titleBox {
+    background-color: var(--bg-color);
+    border: 2px solid var(--accent-color);
+    border-radius: 15px;
+    color: rgb(104, 57, 143);
+    text-align: center;
+    text-decoration: none;
+    height: 95%;
+    width: 95%;
+    margin-top: auto;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom:5px;
+    display:block;
+    padding-top:5px;
+}
+
+.titleBox h1 {
+    background-image: linear-gradient(var(--accent-color), var(--link-color));
+    color: transparent;
+    background-clip: text;
+    font-size: 27px;
+}
+
+.heading_img {
+    border-radius: 15px;
+    height: 95%;
+    width: 95%;
+    display:block;
+    margin: auto;
+    padding-top:5px;
+    padding-bottom:5px;
+}
+
+body {
+    font-family: 'Nunito', sans-serif;
+    margin: 0;
+    background-color: var(--bg-color);
+    /* you can delete the line below if you'd prefer to not use an image */
+    color: var(--font-color);
+    background-image: var(--body-bg-image);
+}
+
+* {
+    box-sizing: border-box;
+}
+
+#container {
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+#container a {
+    color: var(--accent-color);
+    font-weight: bold;
+}
+
+#header {
+    width: 100%;
+    background-color: var(--bg-color);
+    height: 150px;
+    background-image: var(--header-image);
+    background-size: 100%;
+}
+
+#topBar {
+    border-radius: 20px;
+    border: 2px solid var(--accent-color);
+    text-align: center;
+}
+
+#headerArea {
+    border-radius: 20px;
+    border: 2px solid var(--accent-color);
+    background-color: var(--bg-color);
+}
+
+/* navigation section - if it is ever going to be used */
+#navbar {
+    border-radius: 20px;
+    border: 2px solid var(--accent-color);
+    height: 40px;
+    background-color: var(--bg-color);
+    /* navbar color */
+    width: 100%;
+}
+
+#navbar ul {
+    display: flex;
+    padding: 0;
+    margin: 0;
+    list-style-type: none;
+    justify-content: space-evenly;
+}
+
+#navbar li {
+    padding-top: 10px;
+}
+
+/* for the links in the navbar */
+
+#navbar li a { 
+    color: var(--link-color);
+    font-weight: 800;
+    text-decoration: none;
+}
+
+#navbar li a:hover {
+    color: var(--link-hover-color);
+    text-decoration: underline;
+}
+
+#flex {
+    display: flex;
+}
+
+/* this is the aside container */
+aside {
+    background-color: var(--bg-color);
+    width: 200px;
+    padding: 20px;
+    font-size: smaller;
+    /* this makes the sidebar text slightly smaller */
+    border-radius: 20px;
+    border: 2px solid var(--accent-color);
+}
+
+main {
+    background-color: var(--bg-color);
+    border-radius: 20px;
+    border: 2px solid var(--accent-color);
+    flex: 1;
+    padding: 20px;
+    order: 2;
+}
+
+.box {
+    background-color: var(--box-color);
+    border: 2px solid var(--accent-color);
+    padding: 10px;
+    border-radius: 20px;
+}
+
+#topBar {
+    width: 100%;
+    height: 85px;
+    padding: 10px;
+    font-size: smaller;
+    background-color: var(--bg-color);
+}
+
+footer {
+    width: 100%;
+    text-align: center;
+    border-radius: 20px;
+
+    background-color: var(--bg-color);
+    border: 2px solid var(--accent-color);
+    padding: 10px;
+}
+
+#toTop {
+  background-color: var(--bg-color);
+  color: var(--font-color);
+  border: none;
+  padding: 5px 10px;
+  border: 1px dashed var(--accent-color);
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  cursor: pointer;
+}
+
+/* for audio elements */
+
+audio {
+    background-color: var(--link-color);
+    color: var(--link-color);
+}
+
+audio::-webkit-media-controls-panel {
+    background-color: var(--link-color);
+    border: var(--link-color);
+    padding-top:10px;
+    padding-bottom:10px;
+    border-radius: 15px;
+}
+
+img:hover {
+  transform: translateY(-3px) scale(1.01);
+
+  &::before {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+/* page specific stuff here */
+
+/* for character cut in - resolve sizing and all that later */
+.charThought {
+    position:absolute;
+    right: 285px;
+    top:845px;
+    width: 250px; 
+}
+
+.thought {
+    position: absolute;
+    top: 48px;
+    left: 15px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align:center;
+    align-items: center;
+}
+.thought p {
+    color: var(--font-color);
+    font-size: smaller;
+}
+#thoughtIMG {
+    content:var(--thought-image);
+    max-width: 100%;
+}
+
+.character {
+    content: var(--character-image);
+    max-width: 65%;
+    max-height: 65%;
+    margin-left: 5px;
+}
+
+/* divider for game and story pages */
+.divider {
+    border:1px dashed var(--accent-color);
+    width: auto;
+    overflow-y:scroll;
+    overflow-x:hidden;
+    scrollbar-color: var(--accent-color) var(--bg-color);
+    margin-top: 20px;
+    margin-bottom:20px
+}
+
+/* for the avatar on diary page  */
+#avatar {
+    margin: 1em auto;
+    content: var(--avatar-image);
+    max-width: 95%;
+    max-height: 95%;
+    border: 1px solid var(--accent-color);
+    max-width: 155px;
+}
+
+
+/* for pfps as marquee on about page - if this is actually implemented*/
+.pfps img {
+    margin: 1em auto;
+    max-width: 164px;
+    max-height: 164px;
+    border: 1px solid var(--accent-color);
+}
+
+/* Table for Characters*/
+table img {
+    width: 110px;
+    height:110px;
+}
+table {
+    width: 100%;
+}
+
+/* Artwork style changes */
+.artwork img {
+    width: 75%;
+    height: 75%;
+}
+
+/* order stuff without media queries needed */
+
+    #leftSidebar {
+        order: 1;
+    }
+    main {
+        order: 2;
+    }
+    
+    #rightSidebar {
+        order: 3;
+    }
+
+/* media queries and all that */
+@media only screen and (max-width: 1900px) {
+    .charThought {
+        display:none;
+    }
+}
+
+@media only screen and (max-width: 950px) {
+    #flex {
+        flex-wrap: wrap;
+    }
+
+    aside {
+        width: 100%;
+    }
+
+    /* the order of the items is adjusted here for responsiveness!
+since the sidebars would be too small on a mobile device.
+feel free to play around with the order!
+*/
+    #leftSidebar {
+        order: 1;
+    }
+    main {
+        order: 2;
+    }
+    
+    #rightSidebar {
+        order: 3;
+    }
+
+    #navbar ul {
+        flex-wrap: wrap;
+    }
+}
+
+/* THIS MAY NOT WORK ON OTHER BROWSERS */
+
+@media only screen and (min-width: 2000px) { 
+    .charThought {
+        display:none;
+    }
+}
+
+/* dark / light mode toggle css */
+
+.theme-switch-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  em {
+    margin-left: 10px;
+    font-size: 1rem;
+  }
+}
+.theme-switch {
+  display: inline-block;
+  height: 20px;
+  position: relative;
+  width: 55px;
+}
+.theme-switch input {
+  display:none;
+}
+
+.slider {
+  background-color: #ce41ce;
+  bottom: 0;
+  cursor: pointer;
+  left: 0;
+  position: absolute;
+  right: 0;
+  top: 0;
+  transition: .4s;
+}
+.slider:before {
+  background-color: #fff;
+  bottom: 4px;
+  content: "";
+  height: 15px;
+  left: 4px;
+  position: absolute;
+  transition: .4s;
+  width: 15px;
+}
+
+input:checked + .slider {
+  background-color: #e6a52e;
+}
+input:checked + .slider:before {
+  transform: translateX(30px);
+}
+.slider.round {
+  border-radius: 34px;
+}
+.slider.round:before {
+  border-radius: 50%;
+}
+
+/* FOR THE MODAL IMAGE CSS */
+/* Style the Image Used to Trigger the Modal */
+#myImg {
+  border-radius: 5px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+#myImg:hover {opacity: 0.7;}
+
+/* The Modal (background) */
+.modal {
+  display: none; /* Hidden by default */
+  position: fixed; /* Stay in place */
+  z-index: 1; /* Sit on top */
+  padding-top: 100px; /* Location of the box */
+  left: 0;
+  top: 0;
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  overflow: auto; /* Enable scroll if needed */
+  background-color: rgb(0,0,0); /* Fallback color */
+  background-color: var(--accent-with-opacity) /* Black w/ opacity */
+}
+
+/* Modal Content (Image) */
+.modal-content {
+  margin: auto;
+  display: block;
+  width:85%;
+  height:auto;
+  max-width: 750px;
+}
+
+/* Caption of Modal Image (Image Text) - Same Width as the Image */
+#caption {
+  margin: auto;
+  display: block;
+  width: 80%;
+  max-width: 700px;
+  text-align: center;
+  color: #ccc;
+  padding: 10px 0;
+  height: 150px;
+}
+
+
+/* The Close Button */
+.close {
+  position: absolute;
+  top: 15px;
+  right: 35px;
+  color: var(--accent-color);
+  font-size: 40px;
+  font-weight: bold;
+  transition: 0.3s;
+}
+
+.close:hover,
+.close:focus {
+  color: #bbb;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+/* 100% Image Width on Smaller Screens */
+@media only screen and (max-width: 700px){
+  .modal-content {
+    width: 100%;
+  }
+}
+
+/* new marquee element animations... rip old marquee element 13/01/2026 */
+.marquee {
+  width: 100%;
+  overflow: hidden;
+  white-space: nowrap;
+  box-sizing: border-box;
+}
+
+.marquee_img {
+  display: inline-block;
+  padding-left: 100%;
+  animation: marquee 40s linear infinite;
+}
+
+.marquee_text {
+  display: inline-block;
+  padding-left: 100%;
+  animation: marquee 20s linear infinite;  
+}
+
+.marquee_soundtrack {
+    display: inline-block;
+    padding-left: 100%;
+    animation: marquee 10s linear infinite;
+}
+
+@keyframes marquee {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-100%);
+  }
+}
