@@ -1,0 +1,120 @@
+@font-face {
+    font-family: Nunito;
+    src: url('https://sadhost.neocities.org/fonts/Nunito-Regular.ttf');
+}
+
+:root {
+    --body-bg-image: linear-gradient(#4b0966, #2b013c);
+    margin:0;
+    --content: #43256E;
+    
+    /* DEFINED VARIABLES */
+    --bg-color: #000000;
+    --box-color: #1c092d;
+    --font-color: #fceaff;
+    --accent-color: #ce41ce;
+    --link-color: #8b498b;
+    --link-hover-color: #a49cba;
+}
+    
+html, body {
+    margin: 0;
+    min-height: 100vh;
+}
+
+body {
+    font-family: 'Nunito', sans-serif;
+    margin: 0;
+    background-color: var(--bg-color);
+    color: var(--font-color);
+    background-image: var(--body-bg-image);
+}
+
+body {
+    padding-top: 150px;
+    justify-content: center;
+    align-items: center;
+    overflow-y: scroll;
+    /* overflow: hidden; */
+}
+
+p {
+    font-size: large;
+}
+
+/* only used for template text atm */
+
+h1 {
+    color: var(--accent-color);
+    font-size: 25px;
+}
+
+.heading_img {
+    border-radius: 15px;
+    height: 50%;
+    width: 50%;
+    display:block;
+}
+
+.box {
+    background-color: var(--bg-color);
+    border: 2px solid var(--accent-color);
+    padding-left: 25px;
+    padding-right: 25px;
+    border-radius: 20px;
+    width: fit-content;
+    height: fit-content;
+}
+
+.titleBox {
+    background-color: #000000;
+    border: 2px solid var(--accent-color);
+    border-radius: 15px;
+    color: rgb(104, 57, 143);
+    max-height: fit-content;
+    text-align: center;
+}
+
+.titleBox h1 {
+    background-image: linear-gradient(var(--accent-color), var(--link-color));
+    color: transparent;
+    background-clip: text;
+}
+
+a {
+    color: var(--link-color);
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.divider {
+    border:1px dashed var(--accent-color);
+    width: auto;
+    overflow-y:scroll;
+    overflow-x:hidden;
+    scrollbar-color: var(--accent-color) var(--bg-color);
+    margin-top: 20px;
+    margin-bottom:20px
+}
+
+.floatingImg {
+    width: 600px;
+    animation: floating 5s ease-in-out both   alternate;
+}
+
+@keyframes floating {
+    from {
+    transform: translateY(15px);
+    }
+    to {
+    transform: translateY(0px);
+    }
+}
+
+
+.logo1 img{
+    margin-right:200px;
+}
+.logo2 img{
+    margin-left:100px;
+}
